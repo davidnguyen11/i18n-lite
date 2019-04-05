@@ -54,4 +54,7 @@ import { i18n } from './locale';
 setGlobalLocale({ locale: 'vi' });
 const { greeting } = i18n.messages();
 const content = greeting({ someone: 'John', name: 'David' });
+
+// Vietnamese: Chào John. Tên mình là David
+// English: Hi John. My name is David
 ```
