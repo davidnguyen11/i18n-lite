@@ -9,17 +9,20 @@ This component is the wrapped library of [intl-messageformat](https://github.com
 ## Usage
 
 ```bash
-component/
-├── locale/
-    └── locale.en.json
-    └── locale.vi.json
-    └── index.js
+my-app
+├── components/
+    └── abc/
+        └──locale/
+            └──locale.en.json
+            └──locale.vi.json
+            └──index.js
+        └──index.js
 ├── App.js
 ```
 
 Create json locale files
 
-**locale.en.json**
+**components/abc/locale/locale.en.json**
 
 ```json
 {
@@ -27,7 +30,7 @@ Create json locale files
 }
 ```
 
-**locale.vi.json**
+**components/abc/locale/locale.vi.json**
 
 ```json
 {
@@ -35,7 +38,7 @@ Create json locale files
 }
 ```
 
-**index.js**
+**components/abc/locale/index.js**
 
 ```ts
 import { getI18n } from 'i18n-lite';
@@ -45,16 +48,21 @@ export const i18n = getI18n({
 });
 ```
 
-**App.js**
-
-```ts
-import { setGlobalLocale } from 'i18n-lite';
+**components/abc/index.js**
+```js
 import { i18n } from './locale';
 
-setGlobalLocale({ locale: 'vi' });
 const { greeting } = i18n.messages();
 const content = greeting({ someone: 'John', name: 'David' });
 
 // Vietnamese: Chào John. Tên mình là David
 // English: Hi John. My name is David
+```
+
+**my-app/App.js**
+
+```js
+import { setGlobalLocale } from 'i18n-lite';
+
+setGlobalLocale({ locale: 'vi' });
 ```
