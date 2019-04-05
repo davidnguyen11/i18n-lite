@@ -1,0 +1,73 @@
+{
+  "name": "i18n-lite",
+  "version": "1.0.0",
+  "description": "Simple, lightweight, wrapped function for i18n",
+  "main": "./dist/index.js",
+  "typings": "typings/i18n.d.ts",
+  "author": "David Nguyen <dzungnguyen179@gmail.com> (dzungnguyen179@gmail.com)",
+  "files": [
+    "dist",
+    "typings",
+    "flow-typed"
+  ],
+  "keywords": [
+    "i18n"
+  ],
+  "scripts": {
+    "build": "./.npm-scripts/build.sh",
+    "test": "./.npm-scripts/test.sh",
+    "validate": "./.npm-scripts/validate.sh",
+    "lint": "./node_modules/.bin/tslint src/**/*.ts"
+  },
+  "dependencies": {
+    "intl-messageformat": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^11.13.0",
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2",
+    "nyc": "^13.3.0",
+    "rimraf": "^2.6.3",
+    "ts-node": "^8.0.3",
+    "tslint": "^5.15.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "typescript": "^3.4.1"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidnguyen179/i18n-lite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/davidnguyen179/i18n-lite/issues"
+  },
+  "homepage": "https://github.com/davidnguyen179/i18n-lite/blob/master/README.md",
+  "nyc": {
+    "include": [
+      "src/*.ts"
+    ],
+    "exclude": [
+      "test/**/*.spec.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "text-summary",
+      "html"
+    ],
+    "watermarks": {
+      "lines": [80, 95],
+      "functions": [80, 95],
+      "branches": [80, 95],
+      "statements": [80, 95]
+    },
+    "sourceMap": true,
+    "instrument": true
+  }
+}
