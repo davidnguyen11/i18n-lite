@@ -6,9 +6,12 @@ cache:
 node_js: '8'
 install: npm install
 script:
+  - npm install codecov -g
   - npm run build
   - npm run validate
 after_script: "cat ./coverage/lcov.info | $(npm bin)/codecov"
+after_success:
+  - codecov
 branches:
   only:
   - master

@@ -1,5 +1,9 @@
 # i18n lightweight
 
+[![Build Status](https://travis-ci.org/davidnguyen179/i18n-lite.svg?branch=master)](https://travis-ci.org/davidnguyen179/i18n-lite) [![codecov](https://codecov.io/gh/davidnguyen179/i18n-lite/branch/master/graph/badge.svg)](https://codecov.io/gh/davidnguyen179/i18n-lite)
+
+<hr/>
+
 This component is the wrapped library of [intl-messageformat](https://github.com/yahoo/intl-messageformat).
 
 ## Usage
