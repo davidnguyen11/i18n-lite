@@ -6,8 +6,8 @@ cache:
 node_js: '8'
 install: npm install
 script:
+  - npm run build
   - npm run validate
-  - npm run coverage
 after_script: "cat ./coverage/lcov.info | $(npm bin)/codecov"
 branches:
   only:
